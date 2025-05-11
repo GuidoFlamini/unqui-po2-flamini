@@ -3,18 +3,22 @@ import java.util.ArrayList;
 
 
 public class MercadoCentral {
-	private ArrayList<Producto> productos = new ArrayList<>();
+	private ArrayList<Comprable> productos = new ArrayList<>();
 	private double montoTotal = 0;
 
-	public ArrayList<Producto> getProductos() {
+	public ArrayList<Comprable> getProductos() {
 		return productos;
 	}
 	
-	public void agregarProducto(Producto p) {
+	public int cantidadDeProductos() {
+		return getProductos().size();
+	}
+	
+	public void agregarProducto(Comprable p) {
 		productos.add(p);
 	}
 	
-	public void registrarProducto(Producto p) {
+	public void registrarProducto(Comprable p) {
 		double precio = p.getPrecio();
 		productos.remove(p);
 		montoTotal = montoTotal + precio;

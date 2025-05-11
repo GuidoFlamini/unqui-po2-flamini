@@ -1,10 +1,10 @@
 package ar.edu.unq.po2.tp5;
 
-public class Producto {
+public class Producto implements Comprable {
 	private String nombre;
 	private double precio;
 	
-	Producto(String n, double p){
+	public Producto(String n, double p){
 		nombre = n;
 		precio = p;
 	}
